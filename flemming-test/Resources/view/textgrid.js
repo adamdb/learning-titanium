@@ -1,0 +1,25 @@
+var copy = ['Lorem', 'ipsum', 'dolar', 'sit'];
+
+var TextGrid = function TextGrid() {
+	Titanium.UI.setBackgroundColor('#000');
+};
+
+TextGrid.prototype.initialize = function() {
+	var window = Titanium.UI.createWindow({
+		title: 'Test',
+		backgroundColor: '#000'
+	});
+	
+	var label1 = Titanium.UI.createLabel({
+		color:'#fff',
+		text:'I am Window 1',
+		font:{fontSize:20,fontFamily:'Helvetica Neue'},
+		textAlign:'center',
+		width:'auto'
+	});
+	
+	window.add(label1);
+	window.open();
+};
+
+module.exports = TextGrid;

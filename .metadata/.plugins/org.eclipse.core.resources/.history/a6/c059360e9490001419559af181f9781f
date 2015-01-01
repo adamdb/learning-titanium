@@ -1,0 +1,9 @@
+var WebView = function WebView() {
+	
+};
+
+WebView.prototype.initialize = function () {
+	
+};
+
+module.exports = WebView;

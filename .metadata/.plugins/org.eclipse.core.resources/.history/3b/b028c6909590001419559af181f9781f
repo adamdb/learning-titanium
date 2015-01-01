@@ -1,0 +1,9 @@
+var TextGrid = require('./view/textgrid');
+var TextGridTest = require('./view/textgridtest');
+
+/*
+var textGrid = new TextGrid();
+textGrid.initialize();*/
+
+var textGridTest = new TextGridTest();
+textGridTest.create();

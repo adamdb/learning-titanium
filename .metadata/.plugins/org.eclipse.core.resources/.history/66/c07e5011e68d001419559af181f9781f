@@ -1,0 +1,56 @@
+var TextGridTest = function TextGridTest() {
+};
+
+var copy = ['lorem', 'ipsum', 'dolar', 'sit'],
+		x = 0,
+		y = 0,
+		height = Ti.Platform.displayCaps.platformHeight,
+		width = Ti.Platform.displayCaps.platformWidth;
+
+TextGridTest.prototype.create = function() {
+	
+	function getTextField(left, top) {
+		var rand = Math.floor(Math.random() * (3 - 0)) + 0;
+		var text = copy[rand];
+		
+		return Ti.UI.createTextField({
+  		color: '#000',
+  		top: top, 
+  		left: left,
+  		value: text,
+  	});
+	}
+	
+	function addTextField() {
+		console.log('add text field');
+		var tf = getTextField(x, y);
+		
+		tf.addEventListener('postlayout', function() {
+			if (x + tf.width > width) {
+				x = 0;
+				y = y + tf.height;
+				window.add(tf);
+				addTextField();
+			}
+			else if (y + tf.height > height) {
+				// Do nothing
+			} 
+			else {
+				window.add(tf);
+				x = x + tf.width;
+				addTextField();
+			}
+		});
+	}
+	
+	var window = Titanium.UI.createWindow({
+		title: 'Test',
+		backgroundColor: '#fff'
+	});
+	
+	window.open();
+	
+	addTextField();
+};
+
+module.exports = TextGridTest;

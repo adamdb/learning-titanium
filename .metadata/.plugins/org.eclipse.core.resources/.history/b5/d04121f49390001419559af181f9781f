@@ -1,0 +1,5 @@
+var WebView = function WebView() {
+	
+};
+
+module.exports = WebView;

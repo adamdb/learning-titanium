@@ -1,0 +1,9 @@
+<html>
+	<head>
+		<title>Test WebView</title>
+		<script src="test.js"></script>
+	</head>
+	<body style="background-color: #fff000">
+		<span>This is just a test.</span>
+	</body>
+</html>

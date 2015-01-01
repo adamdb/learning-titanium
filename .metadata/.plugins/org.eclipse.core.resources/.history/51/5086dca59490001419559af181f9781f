@@ -1,0 +1,11 @@
+var WebView = function WebView() {
+	
+};
+
+WebView.prototype.getWebView = function () {
+	var webview = Titanium.UI.createWebView({url:'http://www.appcelerator.com'});
+  window.add(webview);
+  window.open({modal:true});
+};
+
+module.exports = WebView;

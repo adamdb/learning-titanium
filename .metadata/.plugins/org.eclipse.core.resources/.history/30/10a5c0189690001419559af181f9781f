@@ -1,0 +1,8 @@
+var WebView = function WebView() {
+};
+
+WebView.prototype.getWebView = function () {
+	return Titanium.UI.createWebView({url:'test.html'});  
+};
+
+module.exports = WebView;

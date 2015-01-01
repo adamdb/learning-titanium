@@ -1,0 +1,3 @@
+var textgrid = require('./view/textgrid');
+
+alert('I here!');
